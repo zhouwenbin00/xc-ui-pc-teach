@@ -211,7 +211,7 @@
             //课程id
             this.courseid = this.$route.params.courseid;
             //查询课程计划
-            // this.findTeachplan()
+            this.findTeachplan()
 
         }
     }
