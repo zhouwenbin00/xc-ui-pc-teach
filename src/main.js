@@ -54,8 +54,8 @@ const router = new VueRouter({
 router.beforeEach((to, from, next) => {
   if (openAuthenticate) {
 
-    // console.log(to)
-    // console.log(from)
+    console.log(to)
+    console.log(from)
     //***********身份校验***************
     let activeUser
     let uid
@@ -82,12 +82,12 @@ router.beforeEach((to, from, next) => {
           next();
         } else {
           //跳转到统一登陆
-          window.location = "http://ucenter.xuecheng.com/#/login?returnUrl=" + Base64.encode(window.location)
+          window.location = "http://ucenter.demo.com/#/login?returnUrl=" + Base64.encode(window.location)
         }
       })
     } else {
       //跳转到统一登陆
-      window.location = "http://ucenter.xuecheng.com/#/login?returnUrl=" + Base64.encode(window.location)
+      window.location = "http://ucenter.demo.com/#/login?returnUrl=" + Base64.encode(window.location)
     }
   } else {
     next();
@@ -131,7 +131,7 @@ axios.interceptors.request.use(function (config) {
   return Promise.reject(error);
 });
 // 响应拦截
-/*axios.interceptors.response.use(data => {
+axios.interceptors.response.use(data => {
   console.log("data=")
   console.log(data)
   if(data && data.data){
@@ -141,7 +141,7 @@ axios.interceptors.request.use(function (config) {
       //   path: '/login',
       //   query: {returnUrl: Base64.encode(window.location)}
       // })
-      window.location = "http://ucenter.xuecheng.com/#/login?returnUrl="+ Base64.encode(window.location)
+      window.location = "http://ucenter.demo.com/#/login?returnUrl="+ Base64.encode(window.location)
     }else if(data.data.code && data.data.code =='10002'){
       Message.error('您没有此操作的权限，请与客服联系！');
     }else if(data.data.code && data.data.code =='10003'){
@@ -149,7 +149,7 @@ axios.interceptors.request.use(function (config) {
     }
   }
   return data
-})*/
+})
 /*
  //axios请求超时设置
 axios.defaults.retry = 2;

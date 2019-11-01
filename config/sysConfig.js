@@ -1,10 +1,10 @@
 var sysConfig = {
     xcApiUrlPre: '/api',
     //xcApiUrlPre: '',
-    xcApiUrl: 'http://api.xuecheng.com',
-    imgUrl:'http://img.xuecheng.com/',
-    videoUrl:'http://video.xuecheng.com',
-    openAuthenticate:false,
+    xcApiUrl: 'http://api.demo.com',
+    imgUrl:'http://img.demo.com/',
+    videoUrl:'http://video.demo.com',
+    openAuthenticate:true,
     openAuthorize:false
 }
 

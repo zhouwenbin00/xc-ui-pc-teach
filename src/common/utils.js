@@ -86,7 +86,7 @@ export default {
       if (!authorities) {
         Message.error('对不起您没有此操作权限！');
         //跳转到统一授权失败页面
-        window.location = "http://ucenter.xuecheng.com/#/denied?returnUrl=" + Base64.encode(window.location)
+        window.location = "http://ucenter.demo.com/#/denied?returnUrl=" + Base64.encode(window.location)
         /*        router.push({
                   path: '/login'
                 })*/
@@ -98,7 +98,7 @@ export default {
       if (!ret1) {
         Message.error('对不起您没有此操作权限！');
         //跳转到统一授权失败页面
-        window.location = "http://ucenter.xuecheng.com/#/denied?returnUrl=" + Base64.encode(window.location)
+        window.location = "http://ucenter.demo.com/#/denied?returnUrl=" + Base64.encode(window.location)
         /*router.push({
           path: '/login'
         })*/
